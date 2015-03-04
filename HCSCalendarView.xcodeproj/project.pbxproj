@@ -14,6 +14,12 @@
 		5D23387E1AA6F546009322EC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D23387D1AA6F546009322EC /* Images.xcassets */; };
 		5D2338811AA6F546009322EC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D23387F1AA6F546009322EC /* LaunchScreen.xib */; };
 		5D23388D1AA6F547009322EC /* HCSCalendarViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D23388C1AA6F547009322EC /* HCSCalendarViewTests.m */; };
+		5D2338A31AA6F620009322EC /* HCSCalendarDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2338981AA6F620009322EC /* HCSCalendarDayView.m */; };
+		5D2338A41AA6F620009322EC /* HCSCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D23389A1AA6F620009322EC /* HCSCalloutView.m */; };
+		5D2338A51AA6F620009322EC /* HCSDatesPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D23389C1AA6F620009322EC /* HCSDatesPanel.m */; };
+		5D2338A61AA6F620009322EC /* HCSMonthSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D23389E1AA6F620009322EC /* HCSMonthSelectorView.m */; };
+		5D2338A71AA6F620009322EC /* HCSNewCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2338A01AA6F620009322EC /* HCSNewCalendarView.m */; };
+		5D2338A81AA6F620009322EC /* HCSNewDateSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2338A21AA6F620009322EC /* HCSNewDateSelectorView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +46,18 @@
 		5D2338861AA6F547009322EC /* HCSCalendarViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HCSCalendarViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D23388B1AA6F547009322EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D23388C1AA6F547009322EC /* HCSCalendarViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCSCalendarViewTests.m; sourceTree = "<group>"; };
+		5D2338971AA6F620009322EC /* HCSCalendarDayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSCalendarDayView.h; sourceTree = "<group>"; };
+		5D2338981AA6F620009322EC /* HCSCalendarDayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCSCalendarDayView.m; sourceTree = "<group>"; };
+		5D2338991AA6F620009322EC /* HCSCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSCalloutView.h; sourceTree = "<group>"; };
+		5D23389A1AA6F620009322EC /* HCSCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCSCalloutView.m; sourceTree = "<group>"; };
+		5D23389B1AA6F620009322EC /* HCSDatesPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSDatesPanel.h; sourceTree = "<group>"; };
+		5D23389C1AA6F620009322EC /* HCSDatesPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCSDatesPanel.m; sourceTree = "<group>"; };
+		5D23389D1AA6F620009322EC /* HCSMonthSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSMonthSelectorView.h; sourceTree = "<group>"; };
+		5D23389E1AA6F620009322EC /* HCSMonthSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCSMonthSelectorView.m; sourceTree = "<group>"; };
+		5D23389F1AA6F620009322EC /* HCSNewCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSNewCalendarView.h; sourceTree = "<group>"; };
+		5D2338A01AA6F620009322EC /* HCSNewCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCSNewCalendarView.m; sourceTree = "<group>"; };
+		5D2338A11AA6F620009322EC /* HCSNewDateSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSNewDateSelectorView.h; sourceTree = "<group>"; };
+		5D2338A21AA6F620009322EC /* HCSNewDateSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCSNewDateSelectorView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +81,7 @@
 		5D2338641AA6F546009322EC = {
 			isa = PBXGroup;
 			children = (
+				5D2338961AA6F620009322EC /* Calendar */,
 				5D23386F1AA6F546009322EC /* HCSCalendarView */,
 				5D2338891AA6F547009322EC /* HCSCalendarViewTests */,
 				5D23386E1AA6F546009322EC /* Products */,
@@ -117,6 +136,26 @@
 				5D23388B1AA6F547009322EC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5D2338961AA6F620009322EC /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				5D2338971AA6F620009322EC /* HCSCalendarDayView.h */,
+				5D2338981AA6F620009322EC /* HCSCalendarDayView.m */,
+				5D2338991AA6F620009322EC /* HCSCalloutView.h */,
+				5D23389A1AA6F620009322EC /* HCSCalloutView.m */,
+				5D23389B1AA6F620009322EC /* HCSDatesPanel.h */,
+				5D23389C1AA6F620009322EC /* HCSDatesPanel.m */,
+				5D23389D1AA6F620009322EC /* HCSMonthSelectorView.h */,
+				5D23389E1AA6F620009322EC /* HCSMonthSelectorView.m */,
+				5D23389F1AA6F620009322EC /* HCSNewCalendarView.h */,
+				5D2338A01AA6F620009322EC /* HCSNewCalendarView.m */,
+				5D2338A11AA6F620009322EC /* HCSNewDateSelectorView.h */,
+				5D2338A21AA6F620009322EC /* HCSNewDateSelectorView.m */,
+			);
+			name = Calendar;
+			path = HCSCalendarView/Calendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +258,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D2338A71AA6F620009322EC /* HCSNewCalendarView.m in Sources */,
+				5D2338A81AA6F620009322EC /* HCSNewDateSelectorView.m in Sources */,
+				5D2338A61AA6F620009322EC /* HCSMonthSelectorView.m in Sources */,
+				5D2338A31AA6F620009322EC /* HCSCalendarDayView.m in Sources */,
+				5D2338A51AA6F620009322EC /* HCSDatesPanel.m in Sources */,
 				5D2338791AA6F546009322EC /* ViewController.m in Sources */,
 				5D2338761AA6F546009322EC /* AppDelegate.m in Sources */,
 				5D2338731AA6F546009322EC /* main.m in Sources */,
+				5D2338A41AA6F620009322EC /* HCSCalloutView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +457,7 @@
 				5D2338921AA6F547009322EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5D2338931AA6F547009322EC /* Build configuration list for PBXNativeTarget "HCSCalendarViewTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +466,7 @@
 				5D2338951AA6F547009322EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
