@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 Hot Cocoa Software. All rights reserved.
 //
 
-
 #import "HCSMonthSelectorView.h"
 
 static CGFloat kButtonSide = 44.f;

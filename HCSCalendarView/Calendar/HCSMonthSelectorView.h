@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 Hot Cocoa Software. All rights reserved.
 //
 
-
 #import "DSLCalendarMonthSelectorView.h"
 
 @interface HCSMonthSelectorView : DSLCalendarMonthSelectorView

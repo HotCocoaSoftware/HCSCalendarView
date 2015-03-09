@@ -180,10 +180,12 @@
     }
     
     UIFont *textFont = [UIFont boldSystemFontOfSize:17.0];
-    CGSize textSize = [_labelText sizeWithFont:textFont];
+    CGSize size = [_labelText sizeWithAttributes:@{NSFontAttributeName:textFont}];
+    CGSize textSize = CGSizeMake(ceilf(size.width), ceilf(size.height));
     
     CGRect textRect = CGRectMake(ceilf(CGRectGetMidX(self.bounds) - (textSize.width / 2.0)), ceilf(CGRectGetMidY(self.bounds) - (textSize.height / 2.0)), textSize.width, textSize.height);
-    [_labelText drawInRect:textRect withFont:textFont];
+    
+    [_labelText drawInRect:textRect withAttributes:@{NSFontAttributeName:textFont}];
 }
 
 @end

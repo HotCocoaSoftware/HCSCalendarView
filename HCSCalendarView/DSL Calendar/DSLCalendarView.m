@@ -200,7 +200,7 @@
 
 - (NSString*)monthViewKeyForMonth:(NSDateComponents*)month {
     month = [month.calendar components:NSCalendarUnitYear | NSCalendarUnitMonth fromDate:month.date];
-    return [NSString stringWithFormat:@"%d.%d", month.year, month.month];
+    return [NSString stringWithFormat:@"%ld.%ld", (long)month.year, (long)month.month];
 }
 
 - (DSLCalendarMonthView*)cachedOrCreatedMonthViewForMonth:(NSDateComponents*)month {
@@ -224,8 +224,8 @@
     month = [month copy];
     
     NSDateComponents *yearComponents  = [[NSCalendar currentCalendar] components:NSCalendarUnitYear |    NSCalendarUnitMonth  fromDate:[NSDate date]];
-    int currentYear = [yearComponents year];
-    int currentmonth = [yearComponents month];
+    NSInteger currentYear = [yearComponents year];
+    NSInteger currentmonth = [yearComponents month];
     if ([month month] == currentmonth && [month year] == currentYear) {
         [self.monthSelectorView.backButton setEnabled: NO];
         [self.monthSelectorView.backButton setImage:[UIImage imageNamed:@"btn_cal_back_normal"] forState:UIControlStateDisabled];

@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 Hot Cocoa Software. All rights reserved.
 //
 
-
 #import "HCSCalendarDayView.h"
 #import "DSLCalendarDayView.h"
 
@@ -291,11 +290,12 @@ static CGFloat const kRadius = 18.f;
     
     [color set];
     
-    NSString *text = [NSString stringWithFormat:@"%d", self.day.day];
-    CGSize textSize = [text sizeWithFont:textFont];
+    NSString *text = [NSString stringWithFormat:@"%ld", (long)self.day.day];
+    CGSize size = [text sizeWithAttributes:@{NSFontAttributeName:textFont}];
+    CGSize textSize = CGSizeMake(ceilf(size.width), ceilf(size.height));
     
     CGRect textRect = CGRectMake(ceilf(CGRectGetMidX(self.bounds) - (textSize.width / 2.0)), ceilf(CGRectGetMidY(self.bounds) - (textSize.height / 2.0)), textSize.width, textSize.height);
-    [text drawInRect:textRect withFont:textFont];
+    [text drawInRect:textRect withAttributes:@{NSFontAttributeName:textFont}];
 }
 
 - (BOOL)isAvailable {
