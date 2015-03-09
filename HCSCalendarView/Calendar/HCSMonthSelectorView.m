@@ -90,7 +90,7 @@ static NSUInteger kDaysInWeek = 7;
 + (void)setupDayLabelsForView:(HCSMonthSelectorView *)view {
     
     // Get a dictionary of localised day names
-    NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:NSCalendarCalendarUnit | NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekdayCalendarUnit fromDate:[NSDate date]];
+    NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitCalendar | NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekday fromDate:[NSDate date]];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"EEE";
     
@@ -109,7 +109,7 @@ static NSUInteger kDaysInWeek = 7;
         [dayLabels addObject:dayLabel];
         
         dateComponents.day = dateComponents.day + 1;
-        dateComponents = [dateComponents.calendar components:NSCalendarCalendarUnit | NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekdayCalendarUnit fromDate:dateComponents.date];
+        dateComponents = [dateComponents.calendar components:NSCalendarUnitCalendar | NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekday fromDate:dateComponents.date];
     }
     
     view.dayLabels = dayLabels;

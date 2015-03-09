@@ -14,10 +14,19 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor backgroundColor];
+        self.backgroundColor = [UIColor clearColor];
         // Initialization code
     }
     return self;
+}
+
++ (UIColor *)backgroundColor {
+    static UIColor *g_ixiBackgroundColor;
+    if(!g_ixiBackgroundColor) {
+        g_ixiBackgroundColor = [UIColor colorWithRed:241.0/255.0 green:241.0/255.0 blue:241.0/255.0 alpha:1];
+    }
+    
+    return g_ixiBackgroundColor;
 }
 
 - (void)setupCalloutViewForDateComponent:(NSDateComponents *)date {

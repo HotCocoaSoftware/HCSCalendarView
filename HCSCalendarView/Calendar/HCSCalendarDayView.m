@@ -18,7 +18,7 @@
 #define CALENDAR_NUMBERS_COLOR [UIColor colorWithRed:203.f/255.f green:203.f/255.f blue:203.f/255.f alpha:1.000]
 #define HIGHLIGHT_BLUE [UIColor colorWithRed:22.f/255.f green:146.f/255.f blue:197.f/255.f alpha:1.000]
 
-static float kLengths[2] = {1, 1};
+static const CGFloat kLengths[2] = {1, 1};
 static CGFloat const kRadius = 18.f;
 
 @implementation HCSCalendarDayView

@@ -90,7 +90,7 @@
 - (void)commonInit {
     _dayViewHeight = 44;
     
-    _visibleMonth = [[NSCalendar currentCalendar] components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekdayCalendarUnit | NSCalendarCalendarUnit fromDate:[NSDate date]];
+    _visibleMonth = [[NSCalendar currentCalendar] components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekday | NSCalendarUnitCalendar fromDate:[NSDate date]];
     _visibleMonth.day = 1;
     
     self.monthSelectorView = [[[self class] monthSelectorViewClass] view];
@@ -199,12 +199,12 @@
 }
 
 - (NSString*)monthViewKeyForMonth:(NSDateComponents*)month {
-    month = [month.calendar components:NSYearCalendarUnit | NSMonthCalendarUnit fromDate:month.date];
+    month = [month.calendar components:NSCalendarUnitYear | NSCalendarUnitMonth fromDate:month.date];
     return [NSString stringWithFormat:@"%d.%d", month.year, month.month];
 }
 
 - (DSLCalendarMonthView*)cachedOrCreatedMonthViewForMonth:(NSDateComponents*)month {
-    month = [month.calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekdayCalendarUnit | NSCalendarCalendarUnit fromDate:month.date];
+    month = [month.calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekday | NSCalendarUnitCalendar fromDate:month.date];
 
     NSString *monthViewKey = [self monthViewKeyForMonth:month];
     DSLCalendarMonthView *monthView = [self.monthViews objectForKey:monthViewKey];
@@ -223,7 +223,7 @@
     fromMonth = [fromMonth copy];
     month = [month copy];
     
-    NSDateComponents *yearComponents  = [[NSCalendar currentCalendar] components:NSYearCalendarUnit |    NSMonthCalendarUnit  fromDate:[NSDate date]];
+    NSDateComponents *yearComponents  = [[NSCalendar currentCalendar] components:NSCalendarUnitYear |    NSCalendarUnitMonth  fromDate:[NSDate date]];
     int currentYear = [yearComponents year];
     int currentmonth = [yearComponents month];
     if ([month month] == currentmonth && [month year] == currentYear) {
@@ -249,7 +249,7 @@
     for (NSInteger monthOffset = -2; monthOffset <= 2; monthOffset += 1) {
         NSDateComponents *offsetMonth = [month copy];
         offsetMonth.month = offsetMonth.month + monthOffset;
-        offsetMonth = [offsetMonth.calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekdayCalendarUnit | NSCalendarCalendarUnit fromDate:offsetMonth.date];
+        offsetMonth = [offsetMonth.calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekday | NSCalendarUnitCalendar fromDate:offsetMonth.date];
         
         // Check if this month should overlap the previous month
         if (![self monthStartsOnFirstDayOfWeek:offsetMonth]) {
@@ -368,7 +368,7 @@
 
 - (BOOL)monthStartsOnFirstDayOfWeek:(NSDateComponents*)month {
     // Make sure we have the components we need to do the calculation
-    month = [month.calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekdayCalendarUnit | NSCalendarCalendarUnit fromDate:month.date];
+    month = [month.calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekday | NSCalendarUnitCalendar fromDate:month.date];
     
     return (month.weekday - month.calendar.firstWeekday == 0);
 }

@@ -69,7 +69,7 @@
     [cancelButton setTitle:@"Done" forState:UIControlStateNormal];
     [cancelButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [cancelButton setBackgroundColor:[UIColor blueColor]];
-    cancelButton.titleLabel.font = [UIFont ixiRegularFontOfSize:kLargeFontSizeGlobal];
+    cancelButton.titleLabel.font = [UIFont systemFontOfSize:18.f];
     [cancelButton addTarget:self action:@selector(cancelButtonTapped:)forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:cancelButton];
 }
