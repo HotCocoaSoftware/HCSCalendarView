@@ -19,7 +19,7 @@
 		5D2338A51AA6F620009322EC /* HCSDatesPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D23389C1AA6F620009322EC /* HCSDatesPanel.m */; };
 		5D2338A61AA6F620009322EC /* HCSMonthSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D23389E1AA6F620009322EC /* HCSMonthSelectorView.m */; };
 		5D2338A71AA6F620009322EC /* HCSNewCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2338A01AA6F620009322EC /* HCSNewCalendarView.m */; };
-		5D2338A81AA6F620009322EC /* HCSNewDateSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2338A21AA6F620009322EC /* HCSNewDateSelectorView.m */; };
+		5D2338A81AA6F620009322EC /* HCSDateSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2338A21AA6F620009322EC /* HCSDateSelectorView.m */; };
 		5D9050561AADABFA002EFD59 /* DSLCalendarDayCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9050461AADABFA002EFD59 /* DSLCalendarDayCalloutView.m */; };
 		5D9050571AADABFA002EFD59 /* DSLCalendarDayCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D9050471AADABFA002EFD59 /* DSLCalendarDayCalloutView.xib */; };
 		5D9050581AADABFA002EFD59 /* DSLCalendarDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9050491AADABFA002EFD59 /* DSLCalendarDayView.m */; };
@@ -66,8 +66,8 @@
 		5D23389E1AA6F620009322EC /* HCSMonthSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCSMonthSelectorView.m; sourceTree = "<group>"; };
 		5D23389F1AA6F620009322EC /* HCSNewCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSNewCalendarView.h; sourceTree = "<group>"; };
 		5D2338A01AA6F620009322EC /* HCSNewCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCSNewCalendarView.m; sourceTree = "<group>"; };
-		5D2338A11AA6F620009322EC /* HCSNewDateSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSNewDateSelectorView.h; sourceTree = "<group>"; };
-		5D2338A21AA6F620009322EC /* HCSNewDateSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCSNewDateSelectorView.m; sourceTree = "<group>"; };
+		5D2338A11AA6F620009322EC /* HCSDateSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSDateSelectorView.h; sourceTree = "<group>"; };
+		5D2338A21AA6F620009322EC /* HCSDateSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCSDateSelectorView.m; sourceTree = "<group>"; };
 		5D9050451AADABFA002EFD59 /* DSLCalendarDayCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSLCalendarDayCalloutView.h; path = "DSL Calendar/DSLCalendarDayCalloutView.h"; sourceTree = "<group>"; };
 		5D9050461AADABFA002EFD59 /* DSLCalendarDayCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSLCalendarDayCalloutView.m; path = "DSL Calendar/DSLCalendarDayCalloutView.m"; sourceTree = "<group>"; };
 		5D9050471AADABFA002EFD59 /* DSLCalendarDayCalloutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DSLCalendarDayCalloutView.xib; path = "DSL Calendar/DSLCalendarDayCalloutView.xib"; sourceTree = "<group>"; };
@@ -181,8 +181,8 @@
 				5D23389E1AA6F620009322EC /* HCSMonthSelectorView.m */,
 				5D23389F1AA6F620009322EC /* HCSNewCalendarView.h */,
 				5D2338A01AA6F620009322EC /* HCSNewCalendarView.m */,
-				5D2338A11AA6F620009322EC /* HCSNewDateSelectorView.h */,
-				5D2338A21AA6F620009322EC /* HCSNewDateSelectorView.m */,
+				5D2338A11AA6F620009322EC /* HCSDateSelectorView.h */,
+				5D2338A21AA6F620009322EC /* HCSDateSelectorView.m */,
 			);
 			name = Calendar;
 			path = HCSCalendarView/Calendar;
@@ -319,7 +319,7 @@
 				5D9050591AADABFA002EFD59 /* DSLCalendarMonthSelectorView.m in Sources */,
 				5D9050561AADABFA002EFD59 /* DSLCalendarDayCalloutView.m in Sources */,
 				5D2338A71AA6F620009322EC /* HCSNewCalendarView.m in Sources */,
-				5D2338A81AA6F620009322EC /* HCSNewDateSelectorView.m in Sources */,
+				5D2338A81AA6F620009322EC /* HCSDateSelectorView.m in Sources */,
 				5D2338A61AA6F620009322EC /* HCSMonthSelectorView.m in Sources */,
 				5D90505F1AADABFA002EFD59 /* NSDate+DSLCalendarView.m in Sources */,
 				5D2338A31AA6F620009322EC /* HCSCalendarDayView.m in Sources */,
@@ -456,8 +456,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/HCSCalendarView/HCSCalenderView-Prefix.pch";
 				INFOPLIST_FILE = HCSCalendarView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -468,8 +470,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/HCSCalendarView/HCSCalenderView-Prefix.pch";
 				INFOPLIST_FILE = HCSCalendarView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

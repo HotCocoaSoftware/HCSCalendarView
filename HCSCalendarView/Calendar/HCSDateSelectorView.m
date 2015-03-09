@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Hot Cocoa Software. All rights reserved.
 //
 
-#import "HCSNewDateSelectorView.h"
+#import "HCSDateSelectorView.h"
 #import "HCSNewCalendarView.h"
 
 #define CALENDAR_TITLE_COLOR [UIColor colorWithRed:152.f/255.f green:152.f/255.f blue:152.f/255.f alpha:1.f]
@@ -16,13 +16,13 @@
 #define HIGHLIGHT_BLUE [UIColor colorWithRed:22.f/255.f green:146.f/255.f blue:197.f/255.f alpha:1.000]
 #define VEGO_GREY [UIColor colorWithWhite:0.302 alpha:1.000]
 
-@interface HCSNewDateSelectorView () <DSLCalendarViewDelegate>
+@interface HCSDateSelectorView () <DSLCalendarViewDelegate>
 
 @property (nonatomic, strong) HCSNewCalendarView *calendarView;
 
 @end
 
-@implementation HCSNewDateSelectorView
+@implementation HCSDateSelectorView
 
 - (id)initWithImage:(UIImage *)image {
     
@@ -39,7 +39,6 @@
 }
 
 - (id)initWithFrame:(CGRect)frame {
-    
     self = [super initWithFrame:frame];
     
     if (self) {
@@ -90,9 +89,6 @@
     [self.delegate dateSelectorViewDidCancel:self];
 }
 
-- (void)searchAvailabilityButtonTapped:(id)sender {
-    [self.delegate dateSelectorViewDidSearchAvailability:self];
-}
 
 #pragma mark - Calendar delegate
 
